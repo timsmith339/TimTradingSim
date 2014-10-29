@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7B52422-0B0A-440B-B9E3-6EBC8BD2364C}</ProjectGuid>
+    <ProjectGuid>{2CEE1FEA-5240-46D2-8A2E-230E5DCC613C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TimTradingSim</RootNamespace>
-    <AssemblyName>TimTradingSim</AssemblyName>
+    <RootNamespace>TimTradeSimulator</RootNamespace>
+    <AssemblyName>TimTradeSimulator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,16 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Classes\Element.cs" />
-    <Compile Include="Code\Classes\Entities\Person.cs" />
-    <Compile Include="Code\Classes\Inventory.cs" />
-    <Compile Include="Code\Classes\World.cs" />
-    <Compile Include="Code\Interfaces\IEntity.cs" />
-    <Compile Include="Code\Interfaces\IElement.cs" />
-    <Compile Include="Code\Interfaces\IInventory.cs" />
-    <Compile Include="Code\Interfaces\ITradeLogic.cs" />
-    <Compile Include="Code\Interfaces\ITradeNegotiation.cs" />
-    <Compile Include="Code\Interfaces\IWorld.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,8 +48,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Code\Classes\Elements\" />
-    <Folder Include="Specs\" />
+    <ProjectReference Include="..\TimTradingSim\TimTradingSim.csproj">
+      <Project>{c7b52422-0b0a-440b-b9e3-6ebc8bd2364c}</Project>
+      <Name>TimTradingSim</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
