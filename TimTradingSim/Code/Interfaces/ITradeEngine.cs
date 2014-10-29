@@ -7,9 +7,9 @@ using TimTradingSim.Code.Data;
 
 namespace TimTradingSim.Code.Interfaces
 {
-    public interface IInventory
+    public interface ITradeEngine
     {
-        IElement GetElement(ElementsList.Elements element);
-        void AddElement(IElement element);
+        IElement Purchase(ElementsList.Elements request, IElement payment);
+        IElement Sell(ElementsList.Elements request, IElement payment);
     }
 }

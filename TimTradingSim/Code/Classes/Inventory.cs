@@ -3,20 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimTradingSim.Code.Data;
 using TimTradingSim.Code.Interfaces;
 
 namespace TimTradingSim.Code.Classes
 {
     public class Inventory : IInventory
     {
-        public IElement TakeElement(string name)
+        private List<IElement> Elements { get; set; }
+
+        public Inventory()
         {
-            throw new NotImplementedException();
+            Elements = new List<IElement>();
         }
 
-        public void AddElement(IElement Element)
+        public IElement GetElement(ElementsList.Elements element)
         {
-            throw new NotImplementedException();
+            if (Elements.Any(e => e.ElementType == element))
+            {
+                var returnElement = Elements.FirstOrDefault(e => e.ElementType == element);
+                Elements.RemoveAll(e => e.ElementType == element);
+                return returnElement;
+            }
+
+            return null;
+        }
+
+        public void AddElement(IElement element)
+        {
+            if (Elements.Any(e => e.ElementType == element.ElementType))
+            {
+                Elements.First(e => e.ElementType == element.ElementType).Merge(element);
+            }
+            else
+            {
+                Elements.Add(element);
+            }
         }
     }
 }

@@ -1,0 +1,43 @@
+Ideas
+	- There are things (entities) that can posess game-objects.
+		- These entities be people, markets, natural resources (forest, ore mines, etc)
+		- These entities, specifically people, can interact with other entities by giving or taking game-objects.
+		- Before an entitiy gives an object to another entity, it has a demand for what it wants in return.  Usually money, unless it wants another object more and that entity has that object available
+		- The highest valued object is money
+		- people will combine mulitple different objects to create new objects. these new objects may be worth more than the value of the two subsequent objects combined, depending on supply and demand.
+		- Recipes are a blueprint of what things (objects) can be combined together to create a new thing.
+		- All people start with the same basic recipes but they expand as one grows in their profession
+		- Persons have a recipe book, which is just a collection of recipes they have
+		- Persons have an inventory, which is just a collection of Things (with a max amount)
+		
+		
+	Game
+		Entitiy
+			Types
+				Person
+					Types
+						Player
+						AI
+					Has	
+						Recipe Book
+							Collection of Recipes
+				Market
+				Vehicle
+					Cart
+					Truck
+					Resource
+						Natural Resource
+							Forest
+							Mine
+						Buildings ?
+							Factory 
+								Steal
+								Glass
+			Has Inventory
+				Storage space for Things
+		Recipe
+		
+						
+				
+			
+		

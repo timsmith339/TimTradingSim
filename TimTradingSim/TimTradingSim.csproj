@@ -44,12 +44,14 @@
     <Compile Include="Code\Classes\Element.cs" />
     <Compile Include="Code\Classes\Entities\Person.cs" />
     <Compile Include="Code\Classes\Inventory.cs" />
+    <Compile Include="Code\Classes\TradeLogic.cs" />
     <Compile Include="Code\Classes\World.cs" />
+    <Compile Include="Code\Data\ElementList.cs" />
     <Compile Include="Code\Interfaces\IEntity.cs" />
     <Compile Include="Code\Interfaces\IElement.cs" />
     <Compile Include="Code\Interfaces\IInventory.cs" />
+    <Compile Include="Code\Interfaces\ITradeEngine.cs" />
     <Compile Include="Code\Interfaces\ITradeLogic.cs" />
-    <Compile Include="Code\Interfaces\ITradeNegotiation.cs" />
     <Compile Include="Code\Interfaces\IWorld.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,7 +60,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Code\Classes\Elements\" />
     <Folder Include="Specs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

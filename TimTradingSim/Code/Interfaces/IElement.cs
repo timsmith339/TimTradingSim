@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TimTradingSim.Code.Data;
 
 namespace TimTradingSim.Code.Interfaces
 {
     public interface IElement
     {
-        String Name { get; set; }
-        Int32 GetQuantity { get; }
+        ElementsList.Elements ElementType { get; set; }
+        Int32 Quantity { get; }
+        void Merge(IElement element);
     }
 }
